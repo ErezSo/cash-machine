@@ -1,9 +1,9 @@
 const express = require("express");
-const drawMoney = require("./main");
+const drawMoney = require("./drawMoney");
 
 const router = express.Router();
 
-router.route("/withdraw").post(drawMoney);
+router.route("/withdraw/:drawValue").post(drawMoney);
 
 const errorsMiddleware = (err, req, res, next) => {
   console.error(err.message); // eslint-disable-line no-console
