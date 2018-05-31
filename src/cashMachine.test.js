@@ -8,7 +8,7 @@ it("should return the least amount of notes per value", () => {
   expect(actual).toEqual(expected);
 });
 
-it("should empty set if value is not right", () => {
+it("should return empty set if the value is not right", () => {
   const value = 0;
   const expected = [];
   const actual = cashMachine(value, notes);

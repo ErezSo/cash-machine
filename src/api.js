@@ -3,7 +3,7 @@ const drawMoney = require("./drawMoney");
 
 const router = express.Router();
 
-router.route("/withdraw/:drawValue").post(drawMoney);
+router.route("/withdraw/:drawValue").get(drawMoney);
 
 const errorsMiddleware = (err, req, res, next) => {
   console.error(err.message); // eslint-disable-line no-console

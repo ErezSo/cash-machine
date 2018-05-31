@@ -3,9 +3,7 @@ const { notes } = require("./cashMachine");
 
 function drawMoney(req, res) {
   const { drawValue } = req.params;
-
   const value = parseInt(drawValue, 10);
-  console.log("value", value);
 
   if (Boolean(value) === false) {
     return res.status(400).send([]);
@@ -20,7 +18,7 @@ function drawMoney(req, res) {
   }
 
   const result = cashMachine(value, notes);
-  return res.status(200).send(result);
+  return res.status(200).json(result);
 }
 
 module.exports = drawMoney;

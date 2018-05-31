@@ -8,13 +8,14 @@ const port = process.env.PORT || 3002;
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use("/", api);
-app.use(errorsMiddleware);
 
 app.get("*", (req, res, next) => {
   const err = new Error("Page Not Found");
   err.statusCode = 404;
   next(err);
 });
+
+app.use(errorsMiddleware);
 
 app.listen(port, err => {
   if (err) {
