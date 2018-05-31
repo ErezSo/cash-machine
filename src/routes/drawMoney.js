@@ -1,5 +1,5 @@
-const cashMachine = require("./cashMachine");
-const { notes } = require("./cashMachine");
+const cashMachine = require("../services/cashMachine");
+const { notes } = require("../services/cashMachine");
 
 function drawMoney(req, res) {
   const { drawValue } = req.params;
@@ -18,7 +18,7 @@ function drawMoney(req, res) {
   }
 
   const result = cashMachine(value, notes);
-  return res.status(200).json(result);
+  return res.status(200).send(result);
 }
 
 module.exports = drawMoney;

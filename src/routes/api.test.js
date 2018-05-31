@@ -1,5 +1,5 @@
 const request = require("supertest");
-const server = require("./server");
+const server = require("../server");
 
 const api = request(server);
 
@@ -17,7 +17,7 @@ describe("API", () => {
   });
 
   describe("failing POST request", () => {
-    test("not a number value", () => {
+    test("value is not a number ", () => {
       const expected = [];
       return api
         .get("/withdraw/asdf")
@@ -43,7 +43,7 @@ describe("API", () => {
         });
     });
 
-    test("not devisible by 10 number value", () => {
+    test("value not devisible by 10", () => {
       const expected = "NoteUnavailableException";
       return api
         .get("/withdraw/125")
