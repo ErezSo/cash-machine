@@ -2,7 +2,7 @@
 
 The cash machine service returns the requested withdraw value as an array of the least amount of notes.
 
-The GET endpoint `/withdraw/:drawValue` expect to recieve a query parameter of the requested value as a number to withdraw from the account.
+The GET endpoint `/withdraw/:drawValue` expects to recieve a query parameter of the requested value as a number to withdraw from the account.
 
 
 
