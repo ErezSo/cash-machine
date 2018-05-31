@@ -17,7 +17,7 @@ $ npm install
 ### Run the service
 
 ```sh
-$ npm run start
+$ npm start
 ```
 
 ### Run the service locally in dev mode
